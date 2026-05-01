@@ -7,12 +7,26 @@
   let currentCardIndex = 0;
   let isFlipped = false;
   let isAnimating = false;
+  let openCategory = null;
 
+  // Category definitions — deck indices assigned after data loads
+  var categories = [
+    { name: "Noun Charts", deckIndices: [] },
+    { name: "Verb Charts", deckIndices: [] },
+    { name: "Vocab", deckIndices: [] }
+  ];
+
+  var nounNames = ["Muslim Chart", "Detached Pronouns", "Attached Pronouns"];
+  var vocabNames = ["Vocab List 1"];
+
+  const categorySelector = document.getElementById("categorySelector");
+  const deckDrawer = document.getElementById("deckDrawer");
   const deckSelector = document.getElementById("deckSelector");
   const cardCounter = document.getElementById("cardCounter");
   const flashcard = document.getElementById("flashcard");
   const arabicText = document.getElementById("arabicText");
-  const englishText = document.getElementById("englishText");
+  const mainText = document.getElementById("mainText");
+  const subText = document.getElementById("subText");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
   const flipBtn = document.getElementById("flipBtn");
@@ -23,38 +37,121 @@
     .then(function (res) { return res.json(); })
     .then(function (data) {
       decks = data.decks;
+      assignCategories();
       selectedDecks = new Set([0]);
-      renderDeckButtons();
+      renderCategoryButtons();
       buildCards();
     });
 
-  function renderDeckButtons() {
-    deckSelector.innerHTML = "";
+  function assignCategories() {
+    categories[0].deckIndices = [];
+    categories[1].deckIndices = [];
+    categories[2].deckIndices = [];
     decks.forEach(function (deck, i) {
+      if (nounNames.indexOf(deck.name) !== -1) {
+        categories[0].deckIndices.push(i);
+      } else if (vocabNames.indexOf(deck.name) !== -1) {
+        categories[2].deckIndices.push(i);
+      } else {
+        categories[1].deckIndices.push(i);
+      }
+    });
+  }
+
+  function renderCategoryButtons() {
+    categorySelector.innerHTML = "";
+    categories.forEach(function (cat, ci) {
       var btn = document.createElement("button");
-      btn.className = "deck-btn" + (selectedDecks.has(i) ? " active" : "");
-      btn.textContent = deck.name;
-      btn.addEventListener("click", function () { toggleDeck(i); });
+      btn.className = "category-btn";
+      btn.addEventListener("click", function () { handleCategoryClick(ci); });
+
+      var label = document.createTextNode(cat.name);
+      btn.appendChild(label);
+
+      // Add dot if any decks in this category are selected
+      var hasSelected = cat.deckIndices.some(function (di) { return selectedDecks.has(di); });
+      if (hasSelected) {
+        var dot = document.createElement("span");
+        dot.className = "cat-dot";
+        btn.appendChild(dot);
+      }
+
+      if (openCategory === ci) {
+        btn.classList.add("open");
+      }
+
+      categorySelector.appendChild(btn);
+    });
+  }
+
+  function handleCategoryClick(ci) {
+    var cat = categories[ci];
+
+    // Single-deck category: toggle the deck directly
+    if (cat.deckIndices.length === 1) {
+      var di = cat.deckIndices[0];
+      if (selectedDecks.has(di)) {
+        if (selectedDecks.size <= 1) return;
+        selectedDecks.delete(di);
+      } else {
+        selectedDecks.add(di);
+      }
+      // Close drawer if open
+      openCategory = null;
+      deckDrawer.classList.remove("open");
+      deckSelector.innerHTML = "";
+      renderCategoryButtons();
+      buildCards();
+      return;
+    }
+
+    // Multi-deck category: toggle drawer
+    if (openCategory === ci) {
+      openCategory = null;
+      deckDrawer.classList.remove("open");
+      deckSelector.innerHTML = "";
+      renderCategoryButtons();
+      return;
+    }
+
+    openCategory = ci;
+    renderCategoryButtons();
+    renderDeckButtons(cat.deckIndices);
+    deckDrawer.classList.add("open");
+  }
+
+  function renderDeckButtons(indices) {
+    deckSelector.innerHTML = "";
+    indices.forEach(function (di) {
+      var btn = document.createElement("button");
+      btn.className = "deck-btn" + (selectedDecks.has(di) ? " active" : "");
+      btn.textContent = decks[di].name;
+      btn.addEventListener("click", function () { toggleDeck(di); });
       deckSelector.appendChild(btn);
     });
   }
 
   function toggleDeck(index) {
     if (selectedDecks.has(index)) {
-      // Don't allow deselecting the last deck
       if (selectedDecks.size <= 1) return;
       selectedDecks.delete(index);
     } else {
       selectedDecks.add(index);
     }
     updateDeckButtons();
+    renderCategoryButtons();
     buildCards();
   }
 
   function updateDeckButtons() {
     var btns = deckSelector.querySelectorAll(".deck-btn");
+    // Map visible buttons to their deck indices from the open category
+    if (openCategory === null) return;
+    var indices = categories[openCategory].deckIndices;
     btns.forEach(function (b, i) {
-      b.classList.toggle("active", selectedDecks.has(i));
+      if (i < indices.length) {
+        b.classList.toggle("active", selectedDecks.has(indices[i]));
+      }
     });
   }
 
@@ -63,7 +160,7 @@
     decks.forEach(function (deck, i) {
       if (selectedDecks.has(i)) {
         deck.cards.forEach(function (c) {
-          currentCards.push({ arabic: c.arabic, english: c.english });
+          currentCards.push({ arabic: c.arabic, main: c.main, sub: c.sub });
         });
       }
     });
@@ -75,14 +172,16 @@
   function showCard() {
     if (currentCards.length === 0) {
       arabicText.textContent = "No cards";
-      englishText.textContent = "";
+      mainText.textContent = "";
+      subText.textContent = "";
       cardCounter.textContent = "";
       return;
     }
 
     var card = currentCards[currentCardIndex];
     arabicText.textContent = card.arabic;
-    englishText.textContent = card.english;
+    mainText.textContent = card.main;
+    subText.textContent = card.sub;
     cardCounter.textContent = (currentCardIndex + 1) + " / " + currentCards.length;
 
     // Reset flip
@@ -107,7 +206,8 @@
       currentCardIndex = newIndex;
       var card = currentCards[currentCardIndex];
       arabicText.textContent = card.arabic;
-      englishText.textContent = card.english;
+      mainText.textContent = card.main;
+      subText.textContent = card.sub;
       cardCounter.textContent = (currentCardIndex + 1) + " / " + currentCards.length;
       isAnimating = false;
     });

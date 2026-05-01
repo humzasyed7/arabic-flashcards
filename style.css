@@ -52,13 +52,75 @@ body {
   text-transform: uppercase;
 }
 
-/* Deck selector */
-.deck-selector {
+/* Category selector */
+.category-selector {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
   margin-bottom: 1.25rem;
+}
+
+.category-btn {
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 44px;
+  touch-action: manipulation;
+  position: relative;
+}
+
+.category-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.category-btn.open {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.category-btn .cat-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.category-btn.open .cat-dot {
+  background: #fff;
+}
+
+/* Deck drawer */
+.deck-drawer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, margin 0.3s ease;
+  margin-bottom: 0;
+}
+
+.deck-drawer.open {
+  max-height: 200px;
+  margin-bottom: 1.25rem;
+}
+
+/* Deck selector (sub-pills) */
+.deck-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.6rem 0;
 }
 
 .deck-btn {
@@ -138,6 +200,8 @@ body {
 .card-back {
   transform: rotateX(180deg);
   border-top: 4px solid var(--accent-hover);
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .arabic-text {
@@ -149,11 +213,20 @@ body {
   color: var(--text);
 }
 
-.english-text {
-  font-size: 1.5rem;
-  line-height: 1.5;
+.main-text {
+  font-size: 1.6rem;
+  line-height: 1.4;
   text-align: center;
   color: var(--text);
+  font-weight: 700;
+}
+
+.sub-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-light);
+  font-weight: 500;
 }
 
 /* Controls */
@@ -266,6 +339,15 @@ body {
     margin-bottom: 1rem;
   }
 
+  .category-selector {
+    gap: 0.4rem;
+  }
+
+  .category-btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+  }
+
   .deck-selector {
     gap: 0.4rem;
   }
@@ -283,8 +365,12 @@ body {
     font-size: 2.2rem;
   }
 
-  .english-text {
-    font-size: 1.3rem;
+  .main-text {
+    font-size: 1.4rem;
+  }
+
+  .sub-text {
+    font-size: 0.85rem;
   }
 }
 
@@ -315,8 +401,12 @@ body {
     font-size: 2rem;
   }
 
-  .english-text {
-    font-size: 1.15rem;
+  .main-text {
+    font-size: 1.25rem;
+  }
+
+  .sub-text {
+    font-size: 0.8rem;
   }
 
   .controls {

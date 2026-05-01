@@ -10,8 +10,13 @@
   <div class="container">
     <h1 class="title">Arabic Flashcards</h1>
 
-    <!-- Deck selector -->
-    <div class="deck-selector" id="deckSelector"></div>
+    <!-- Category selector -->
+    <div class="category-selector" id="categorySelector"></div>
+
+    <!-- Deck selector (sub-pills) -->
+    <div class="deck-drawer" id="deckDrawer">
+      <div class="deck-selector" id="deckSelector"></div>
+    </div>
 
     <!-- Card counter -->
     <div class="card-counter" id="cardCounter"></div>
@@ -23,7 +28,8 @@
           <span class="arabic-text" id="arabicText"></span>
         </div>
         <div class="card-face card-back" id="cardBack">
-          <span class="english-text" id="englishText"></span>
+          <span class="main-text" id="mainText"></span>
+          <span class="sub-text" id="subText"></span>
         </div>
       </div>
     </div>
