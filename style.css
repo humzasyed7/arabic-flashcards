@@ -1,0 +1,351 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #1ab394;
+  --accent-hover: #159b7f;
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --border: #dfe6e9;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Deck selector */
+.deck-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.deck-btn {
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.deck-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.deck-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Card counter */
+.card-counter {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* Card area */
+.card-area {
+  width: 100%;
+  perspective: 900px;
+  margin-bottom: 1.5rem;
+}
+
+.flashcard {
+  width: 100%;
+  min-height: 280px;
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  outline: none;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.flashcard.flipped {
+  transform: rotateX(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  backface-visibility: hidden;
+}
+
+.card-front {
+  border-top: 4px solid var(--accent);
+}
+
+.card-back {
+  transform: rotateX(180deg);
+  border-top: 4px solid var(--accent-hover);
+}
+
+.arabic-text {
+  font-size: 2.5rem;
+  line-height: 1.6;
+  direction: rtl;
+  text-align: center;
+  font-family: "Traditional Arabic", "Scheherazade New", "Amiri", serif;
+  color: var(--text);
+}
+
+.english-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-nav {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 2px solid var(--border);
+}
+
+.btn-nav:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-flip {
+  background: var(--accent);
+  color: #fff;
+  min-width: 100px;
+}
+
+.btn-flip:hover {
+  background: var(--accent-hover);
+}
+
+.controls-secondary {
+  margin-bottom: 1.5rem;
+}
+
+.btn-small {
+  background: var(--card-bg);
+  color: var(--text-light);
+  border: 2px solid var(--border);
+  font-size: 0.9rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius);
+}
+
+.btn-small:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Hints */
+.hints {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hint-key {
+  display: inline-block;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+/* Footer */
+.footer {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Swipe hint (mobile only) */
+.swipe-hint {
+  display: none;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Responsive – tablets */
+@media (max-width: 600px) {
+  body {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .deck-selector {
+    gap: 0.4rem;
+  }
+
+  .deck-btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .flashcard {
+    min-height: 240px;
+  }
+
+  .arabic-text {
+    font-size: 2.2rem;
+  }
+
+  .english-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive – phones */
+@media (max-width: 420px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    padding: 1rem 0.5rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .flashcard {
+    min-height: 200px;
+  }
+
+  .card-face {
+    padding: 1.5rem;
+  }
+
+  .arabic-text {
+    font-size: 2rem;
+  }
+
+  .english-text {
+    font-size: 1.15rem;
+  }
+
+  .controls {
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .btn {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+    flex: 1;
+  }
+
+  .btn-flip {
+    min-width: unset;
+  }
+
+  .controls-secondary {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Hide keyboard hints on touch devices, show swipe hint */
+@media (hover: none) and (pointer: coarse) {
+  .hints {
+    display: none;
+  }
+
+  .swipe-hint {
+    display: block;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arabic Flashcards</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Arabic Flashcards</h1>
+
+    <!-- Deck selector -->
+    <div class="deck-selector" id="deckSelector"></div>
+
+    <!-- Card counter -->
+    <div class="card-counter" id="cardCounter"></div>
+
+    <!-- Flashcard -->
+    <div class="card-area" id="cardArea">
+      <div class="flashcard" id="flashcard" tabindex="0">
+        <div class="card-face card-front" id="cardFront">
+          <span class="arabic-text" id="arabicText"></span>
+        </div>
+        <div class="card-face card-back" id="cardBack">
+          <span class="english-text" id="englishText"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-nav" id="prevBtn" aria-label="Previous card">&#8592; Prev</button>
+      <button class="btn btn-flip" id="flipBtn">Flip</button>
+      <button class="btn btn-nav" id="nextBtn" aria-label="Next card">Next &#8594;</button>
+    </div>
+
+    <div class="controls-secondary">
+      <button class="btn btn-small" id="shuffleBtn">Shuffle</button>
+    </div>
+
+    <!-- Swipe hint (shown on touch devices) -->
+    <div class="swipe-hint">Swipe left / right to navigate &middot; Tap card to flip</div>
+
+    <!-- Keyboard hints (hidden on touch devices) -->
+    <div class="hints">
+      <span class="hint-key">Space</span> Flip &nbsp;&nbsp;
+      <span class="hint-key">&#8592;</span> Prev &nbsp;&nbsp;
+      <span class="hint-key">&#8594;</span> Next &nbsp;&nbsp;
+      <span class="hint-key">S</span> Shuffle
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Arabic Flashcards</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+{
+  "decks": [
+    {
+      "name": "Muslim Chart",
+      "cards": [
+        { "arabic": "مُسْلِمٌ", "english": "Masculine · Singular · Subjective" },
+        { "arabic": "مُسْلِمًا", "english": "Masculine · Singular · Object" },
+        { "arabic": "مُسْلِمٍ", "english": "Masculine · Singular · Possessive" },
+        { "arabic": "مُسْلِمَانِ", "english": "Masculine · Dual · Subjective" },
+        { "arabic": "مُسْلِمَيْنِ", "english": "Masculine · Dual · Object / Possessive" },
+        { "arabic": "مُسْلِمُونَ", "english": "Masculine · Plural · Subjective" },
+        { "arabic": "مُسْلِمِينَ", "english": "Masculine · Plural · Object / Possessive" },
+        { "arabic": "مُسْلِمَةٌ", "english": "Feminine · Singular · Subjective" },
+        { "arabic": "مُسْلِمَةً", "english": "Feminine · Singular · Object" },
+        { "arabic": "مُسْلِمَةٍ", "english": "Feminine · Singular · Possessive" },
+        { "arabic": "مُسْلِمَتَانِ", "english": "Feminine · Dual · Subjective" },
+        { "arabic": "مُسْلِمَتَيْنِ", "english": "Feminine · Dual · Object / Possessive" },
+        { "arabic": "مُسْلِمَاتٌ", "english": "Feminine · Plural · Subjective" },
+        { "arabic": "مُسْلِمَاتٍ", "english": "Feminine · Plural · Object / Possessive" }
+      ]
+    },
+    {
+      "name": "Past Tense – فَعَلَ",
+      "cards": [
+        { "arabic": "فَعَلَ", "english": "He did · 3rd · Masculine · Singular" },
+        { "arabic": "فَعَلَا", "english": "They (2) did · 3rd · Masculine · Dual" },
+        { "arabic": "فَعَلُوا", "english": "They did · 3rd · Masculine · Plural" },
+        { "arabic": "فَعَلَتْ", "english": "She did · 3rd · Feminine · Singular" },
+        { "arabic": "فَعَلَتَا", "english": "They (2) did · 3rd · Feminine · Dual" },
+        { "arabic": "فَعَلْنَ", "english": "They did · 3rd · Feminine · Plural" },
+        { "arabic": "فَعَلْتَ", "english": "You did · 2nd · Masculine · Singular" },
+        { "arabic": "فَعَلْتُمَا", "english": "You (2) did · 2nd · Masculine · Dual" },
+        { "arabic": "فَعَلْتُمْ", "english": "You did · 2nd · Masculine · Plural" },
+        { "arabic": "فَعَلْتِ", "english": "You did · 2nd · Feminine · Singular" },
+        { "arabic": "فَعَلْتُمَا", "english": "You (2) did · 2nd · Feminine · Dual" },
+        { "arabic": "فَعَلْتُنَّ", "english": "You did · 2nd · Feminine · Plural" },
+        { "arabic": "فَعَلْتُ", "english": "I did · 1st · Singular" },
+        { "arabic": "فَعَلْنَا", "english": "We did · 1st · Plural" }
+      ]
+    },
+    {
+      "name": "Imperfect Tense – يَفْعَلُ",
+      "cards": [
+        { "arabic": "يَفْعَلُ", "english": "He does · 3rd · Masculine · Singular" },
+        { "arabic": "يَفْعَلَانِ", "english": "They (2) do · 3rd · Masculine · Dual" },
+        { "arabic": "يَفْعَلُونَ", "english": "They do · 3rd · Masculine · Plural" },
+        { "arabic": "تَفْعَلُ", "english": "She does · 3rd · Feminine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "english": "They (2) do · 3rd · Feminine · Dual" },
+        { "arabic": "يَفْعَلْنَ", "english": "They do · 3rd · Feminine · Plural" },
+        { "arabic": "تَفْعَلُ", "english": "You do · 2nd · Masculine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "english": "You (2) do · 2nd · Masculine · Dual" },
+        { "arabic": "تَفْعَلُونَ", "english": "You do · 2nd · Masculine · Plural" },
+        { "arabic": "تَفْعَلِينَ", "english": "You do · 2nd · Feminine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "english": "You (2) do · 2nd · Feminine · Dual" },
+        { "arabic": "تَفْعَلْنَ", "english": "You do · 2nd · Feminine · Plural" },
+        { "arabic": "أَفْعَلُ", "english": "I do · 1st · Singular" },
+        { "arabic": "نَفْعَلُ", "english": "We do · 1st · Plural" }
+      ]
+    },
+    {
+      "name": "Detached Pronouns",
+      "cards": [
+        { "arabic": "هُوَ", "english": "He · 3rd · Masculine · Singular" },
+        { "arabic": "هُمَا", "english": "They (2) · 3rd · Masculine · Dual" },
+        { "arabic": "هُمْ", "english": "They · 3rd · Masculine · Plural" },
+        { "arabic": "هِيَ", "english": "She · 3rd · Feminine · Singular" },
+        { "arabic": "هُمَا", "english": "They (2) · 3rd · Feminine · Dual" },
+        { "arabic": "هُنَّ", "english": "They · 3rd · Feminine · Plural" },
+        { "arabic": "أَنْتَ", "english": "You · 2nd · Masculine · Singular" },
+        { "arabic": "أَنْتُمَا", "english": "You (2) · 2nd · Dual" },
+        { "arabic": "أَنْتُمْ", "english": "You · 2nd · Masculine · Plural" },
+        { "arabic": "أَنْتِ", "english": "You · 2nd · Feminine · Singular" },
+        { "arabic": "أَنْتُمَا", "english": "You (2) · 2nd · Feminine · Dual" },
+        { "arabic": "أَنْتُنَّ", "english": "You · 2nd · Feminine · Plural" },
+        { "arabic": "أَنَا", "english": "I · 1st · Singular" },
+        { "arabic": "نَحْنُ", "english": "We · 1st · Plural" }
+      ]
+    },
+    {
+      "name": "Attached Pronouns",
+      "cards": [
+        { "arabic": "ـهُ", "english": "His / Him · 3rd · Masculine · Singular" },
+        { "arabic": "ـهُمَا", "english": "Their / Them (2) · 3rd · Masculine · Dual" },
+        { "arabic": "ـهُمْ", "english": "Their / Them · 3rd · Masculine · Plural" },
+        { "arabic": "ـهَا", "english": "Her · 3rd · Feminine · Singular" },
+        { "arabic": "ـهُمَا", "english": "Their / Them (2) · 3rd · Feminine · Dual" },
+        { "arabic": "ـهُنَّ", "english": "Their / Them · 3rd · Feminine · Plural" },
+        { "arabic": "ـكَ", "english": "Your / You · 2nd · Masculine · Singular" },
+        { "arabic": "ـكُمَا", "english": "Your / You (2) · 2nd · Dual" },
+        { "arabic": "ـكُمْ", "english": "Your / You · 2nd · Masculine · Plural" },
+        { "arabic": "ـكِ", "english": "Your / You · 2nd · Feminine · Singular" },
+        { "arabic": "ـكُمَا", "english": "Your / You (2) · 2nd · Feminine · Dual" },
+        { "arabic": "ـكُنَّ", "english": "Your / You · 2nd · Feminine · Plural" },
+        { "arabic": "ـي / ـنِي", "english": "My / Me · 1st · Singular" },
+        { "arabic": "ـنَا", "english": "Our / Us · 1st · Plural" }
+      ]
+    },
+    {
+      "name": "Passive Past – فُعِلَ",
+      "cards": [
+        { "arabic": "فُعِلَ", "english": "It was done · 3rd · Masculine · Singular" },
+        { "arabic": "فُعِلَا", "english": "They (2) were done · 3rd · Masculine · Dual" },
+        { "arabic": "فُعِلُوا", "english": "They were done · 3rd · Masculine · Plural" },
+        { "arabic": "فُعِلَتْ", "english": "It was done · 3rd · Feminine · Singular" },
+        { "arabic": "فُعِلَتَا", "english": "They (2) were done · 3rd · Feminine · Dual" },
+        { "arabic": "فُعِلْنَ", "english": "They were done · 3rd · Feminine · Plural" },
+        { "arabic": "فُعِلْتَ", "english": "You were done · 2nd · Masculine · Singular" },
+        { "arabic": "فُعِلْتُمَا", "english": "You (2) were done · 2nd · Dual" },
+        { "arabic": "فُعِلْتُمْ", "english": "You were done · 2nd · Masculine · Plural" },
+        { "arabic": "فُعِلْتِ", "english": "You were done · 2nd · Feminine · Singular" },
+        { "arabic": "فُعِلْتُمَا", "english": "You (2) were done · 2nd · Feminine · Dual" },
+        { "arabic": "فُعِلْتُنَّ", "english": "You were done · 2nd · Feminine · Plural" },
+        { "arabic": "فُعِلْتُ", "english": "I was done · 1st · Singular" },
+        { "arabic": "فُعِلْنَا", "english": "We were done · 1st · Plural" }
+      ]
+    },
+    {
+      "name": "Passive Imperfect – يُفْعَلُ",
+      "cards": [
+        { "arabic": "يُفْعَلُ", "english": "It is being done · 3rd · Masculine · Singular" },
+        { "arabic": "يُفْعَلَانِ", "english": "They (2) are being done · 3rd · Masculine · Dual" },
+        { "arabic": "يُفْعَلُونَ", "english": "They are being done · 3rd · Masculine · Plural" },
+        { "arabic": "تُفْعَلُ", "english": "It is being done · 3rd · Feminine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "english": "They (2) are being done · 3rd · Feminine · Dual" },
+        { "arabic": "يُفْعَلْنَ", "english": "They are being done · 3rd · Feminine · Plural" },
+        { "arabic": "تُفْعَلُ", "english": "You are being done · 2nd · Masculine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "english": "You (2) are being done · 2nd · Dual" },
+        { "arabic": "تُفْعَلُونَ", "english": "You are being done · 2nd · Masculine · Plural" },
+        { "arabic": "تُفْعَلِينَ", "english": "You are being done · 2nd · Feminine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "english": "You (2) are being done · 2nd · Feminine · Dual" },
+        { "arabic": "تُفْعَلْنَ", "english": "You are being done · 2nd · Feminine · Plural" },
+        { "arabic": "أُفْعَلُ", "english": "I am being done · 1st · Singular" },
+        { "arabic": "نُفْعَلُ", "english": "We are being done · 1st · Plural" }
+      ]
+    }
+  ]
+}
