@@ -6,17 +6,17 @@
         { "arabic": "مُسْلِمٌ", "main": "a Muslim", "sub": "Subject · Singular · Masculine · Indefinite" },
         { "arabic": "مُسْلِمًا", "main": "a Muslim", "sub": "Object · Singular · Masculine · Indefinite" },
         { "arabic": "مُسْلِمٍ", "main": "a Muslim", "sub": "Possessive · Singular · Masculine · Indefinite" },
-        { "arabic": "مُسْلِمَانِ", "main": "a Muslim", "sub": "Subject · Dual · Masculine · Indefinite" },
-        { "arabic": "مُسْلِمَيْنِ", "main": "a Muslim", "sub": "Object / Possessive · Dual · Masculine · Indefinite" },
-        { "arabic": "مُسْلِمُونَ", "main": "a Muslim", "sub": "Subject · Plural · Masculine · Indefinite" },
-        { "arabic": "مُسْلِمِينَ", "main": "a Muslim", "sub": "Object / Possessive · Plural · Masculine · Indefinite" },
+        { "arabic": "مُسْلِمَانِ", "main": "2 Muslims", "sub": "Subject · Dual · Masculine · Indefinite" },
+        { "arabic": "مُسْلِمَيْنِ", "main": "2 Muslims", "sub": "Object / Possessive · Dual · Masculine · Indefinite" },
+        { "arabic": "مُسْلِمُونَ", "main": "Muslims", "sub": "Subject · Plural · Masculine · Indefinite" },
+        { "arabic": "مُسْلِمِينَ", "main": "Muslims", "sub": "Object / Possessive · Plural · Masculine · Indefinite" },
         { "arabic": "مُسْلِمَةٌ", "main": "a Muslim", "sub": "Subject · Singular · Feminine · Indefinite" },
         { "arabic": "مُسْلِمَةً", "main": "a Muslim", "sub": "Object · Singular · Feminine · Indefinite" },
         { "arabic": "مُسْلِمَةٍ", "main": "a Muslim", "sub": "Possessive · Singular · Feminine · Indefinite" },
-        { "arabic": "مُسْلِمَتَانِ", "main": "a Muslim", "sub": "Subject · Dual · Feminine · Indefinite" },
-        { "arabic": "مُسْلِمَتَيْنِ", "main": "a Muslim", "sub": "Object / Possessive · Dual · Feminine · Indefinite" },
-        { "arabic": "مُسْلِمَاتٌ", "main": "a Muslim", "sub": "Subject · Plural · Feminine · Indefinite" },
-        { "arabic": "مُسْلِمَاتٍ", "main": "a Muslim", "sub": "Object / Possessive · Plural · Feminine · Indefinite" }
+        { "arabic": "مُسْلِمَتَانِ", "main": "2 Muslims", "sub": "Subject · Dual · Feminine · Indefinite" },
+        { "arabic": "مُسْلِمَتَيْنِ", "main": "2 Muslims", "sub": "Object / Possessive · Dual · Feminine · Indefinite" },
+        { "arabic": "مُسْلِمَاتٌ", "main": "Muslims", "sub": "Subject · Plural · Feminine · Indefinite" },
+        { "arabic": "مُسْلِمَاتٍ", "main": "Muslims", "sub": "Object / Possessive · Plural · Feminine · Indefinite" }
       ]
     },
     {
@@ -41,20 +41,20 @@
     {
       "name": "Imperfect Tense – يَفْعَلُ",
       "cards": [
-        { "arabic": "يَفْعَلُ", "main": "He does", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Singular" },
-        { "arabic": "يَفْعَلَانِ", "main": "They (2) do", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Dual" },
-        { "arabic": "يَفْعَلُونَ", "main": "They do", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Plural" },
-        { "arabic": "تَفْعَلُ", "main": "She does", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Singular" },
-        { "arabic": "تَفْعَلَانِ", "main": "They (2) do", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Dual" },
-        { "arabic": "يَفْعَلْنَ", "main": "They do", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Plural" },
-        { "arabic": "تَفْعَلُ", "main": "You do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Singular" },
-        { "arabic": "تَفْعَلَانِ", "main": "You (2) do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Dual" },
-        { "arabic": "تَفْعَلُونَ", "main": "You do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Plural" },
-        { "arabic": "تَفْعَلِينَ", "main": "You do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Singular" },
-        { "arabic": "تَفْعَلَانِ", "main": "You (2) do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Dual" },
-        { "arabic": "تَفْعَلْنَ", "main": "You do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Plural" },
-        { "arabic": "أَفْعَلُ", "main": "I do", "sub": "Imperfect/Mudari · 1st Person · Singular" },
-        { "arabic": "نَفْعَلُ", "main": "We do", "sub": "Imperfect/Mudari · 1st Person · Plural" }
+        { "arabic": "يَفْعَلُ", "main": "He does / will do", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Singular" },
+        { "arabic": "يَفْعَلَانِ", "main": "They (2) do / will do", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Dual" },
+        { "arabic": "يَفْعَلُونَ", "main": "They do / will do", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Plural" },
+        { "arabic": "تَفْعَلُ", "main": "She does / will do", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "main": "They (2) do / will do", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Dual" },
+        { "arabic": "يَفْعَلْنَ", "main": "They do / will do", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Plural" },
+        { "arabic": "تَفْعَلُ", "main": "You do / will do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "main": "You (2) do / will do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Dual" },
+        { "arabic": "تَفْعَلُونَ", "main": "You do / will do", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Plural" },
+        { "arabic": "تَفْعَلِينَ", "main": "You do / will do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Singular" },
+        { "arabic": "تَفْعَلَانِ", "main": "You (2) do / will do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Dual" },
+        { "arabic": "تَفْعَلْنَ", "main": "You do / will do", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Plural" },
+        { "arabic": "أَفْعَلُ", "main": "I do / will do", "sub": "Imperfect/Mudari · 1st Person · Singular" },
+        { "arabic": "نَفْعَلُ", "main": "We do / will do", "sub": "Imperfect/Mudari · 1st Person · Plural" }
       ]
     },
     {
@@ -117,20 +117,20 @@
     {
       "name": "Passive Imperfect – يُفْعَلُ",
       "cards": [
-        { "arabic": "يُفْعَلُ", "main": "It is being done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Singular" },
-        { "arabic": "يُفْعَلَانِ", "main": "They (2) are being done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Dual" },
-        { "arabic": "يُفْعَلُونَ", "main": "They are being done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Plural" },
-        { "arabic": "تُفْعَلُ", "main": "It is being done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Singular" },
-        { "arabic": "تُفْعَلَانِ", "main": "They (2) are being done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Dual" },
-        { "arabic": "يُفْعَلْنَ", "main": "They are being done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Plural" },
-        { "arabic": "تُفْعَلُ", "main": "You are being done", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Singular" },
-        { "arabic": "تُفْعَلَانِ", "main": "You (2) are being done", "sub": "Imperfect/Mudari · 2nd Person · Dual" },
-        { "arabic": "تُفْعَلُونَ", "main": "You are being done", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Plural" },
-        { "arabic": "تُفْعَلِينَ", "main": "You are being done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Singular" },
-        { "arabic": "تُفْعَلَانِ", "main": "You (2) are being done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Dual" },
-        { "arabic": "تُفْعَلْنَ", "main": "You are being done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Plural" },
-        { "arabic": "أُفْعَلُ", "main": "I am being done", "sub": "Imperfect/Mudari · 1st Person · Singular" },
-        { "arabic": "نُفْعَلُ", "main": "We are being done", "sub": "Imperfect/Mudari · 1st Person · Plural" }
+        { "arabic": "يُفْعَلُ", "main": "It is / will be done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Singular" },
+        { "arabic": "يُفْعَلَانِ", "main": "They (2) are / will be done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Dual" },
+        { "arabic": "يُفْعَلُونَ", "main": "They are / will be done", "sub": "Imperfect/Mudari · 3rd Person · Masculine · Plural" },
+        { "arabic": "تُفْعَلُ", "main": "It is / will be done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "main": "They (2) are / will be done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Dual" },
+        { "arabic": "يُفْعَلْنَ", "main": "They are / will be done", "sub": "Imperfect/Mudari · 3rd Person · Feminine · Plural" },
+        { "arabic": "تُفْعَلُ", "main": "You are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "main": "You (2) are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Dual" },
+        { "arabic": "تُفْعَلُونَ", "main": "You are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Masculine · Plural" },
+        { "arabic": "تُفْعَلِينَ", "main": "You are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Singular" },
+        { "arabic": "تُفْعَلَانِ", "main": "You (2) are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Dual" },
+        { "arabic": "تُفْعَلْنَ", "main": "You are / will be done", "sub": "Imperfect/Mudari · 2nd Person · Feminine · Plural" },
+        { "arabic": "أُفْعَلُ", "main": "I am / will be done", "sub": "Imperfect/Mudari · 1st Person · Singular" },
+        { "arabic": "نُفْعَلُ", "main": "We are / will be done", "sub": "Imperfect/Mudari · 1st Person · Plural" }
       ]
     },
     {
