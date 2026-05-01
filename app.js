@@ -7,6 +7,7 @@
   let currentCardIndex = 0;
   let isFlipped = false;
   let isAnimating = false;
+  let isShuffled = false;
   let openCategory = null;
 
   // Category definitions — deck indices assigned after data loads
@@ -93,8 +94,10 @@
       if (selectedDecks.has(di)) {
         if (selectedDecks.size <= 1) return;
         selectedDecks.delete(di);
+        buildCards();
       } else {
         selectedDecks.add(di);
+        buildCards(di);
       }
       // Close drawer if open
       openCategory = null;
@@ -135,12 +138,15 @@
     if (selectedDecks.has(index)) {
       if (selectedDecks.size <= 1) return;
       selectedDecks.delete(index);
+      updateDeckButtons();
+      renderCategoryButtons();
+      buildCards();
     } else {
       selectedDecks.add(index);
+      updateDeckButtons();
+      renderCategoryButtons();
+      buildCards(index);
     }
-    updateDeckButtons();
-    renderCategoryButtons();
-    buildCards();
   }
 
   function updateDeckButtons() {
@@ -155,15 +161,29 @@
     });
   }
 
-  function buildCards() {
-    currentCards = [];
+  function buildCards(lastAddedDeck) {
+    var newDeckCards = [];
+    var otherCards = [];
     decks.forEach(function (deck, i) {
       if (selectedDecks.has(i)) {
+        var target = (lastAddedDeck !== undefined && i === lastAddedDeck) ? newDeckCards : otherCards;
         deck.cards.forEach(function (c) {
-          currentCards.push({ arabic: c.arabic, main: c.main, sub: c.sub });
+          target.push({ arabic: c.arabic, main: c.main, sub: c.sub });
         });
       }
     });
+    // New deck cards come first
+    currentCards = newDeckCards.concat(otherCards);
+    if (isShuffled) {
+      // Shuffle everything after the first card (keep first card from new deck)
+      var start = newDeckCards.length > 0 ? 1 : 0;
+      for (var i = currentCards.length - 1; i > start; i--) {
+        var j = start + Math.floor(Math.random() * (i - start + 1));
+        var temp = currentCards[i];
+        currentCards[i] = currentCards[j];
+        currentCards[j] = temp;
+      }
+    }
     currentCardIndex = 0;
     isFlipped = false;
     showCard();
@@ -232,6 +252,7 @@
   }
 
   function shuffleCards() {
+    isShuffled = true;
     // Fisher-Yates shuffle
     for (var i = currentCards.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
